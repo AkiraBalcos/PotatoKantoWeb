@@ -1,0 +1,491 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potato Kanto</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .page-content {
+            display: none;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .page-content.active {
+            display: block;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: white;
+            border: 1px solid #f0dfc5;
+            border-radius: 12px;
+            padding: 25px 18px;
+            box-shadow: 0 4px 12px rgba(90, 55, 20, 0.07);
+        }
+
+        .product-card img {
+            width: 100%;
+            max-height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .product-tagline {
+            color: #c77d16;
+            font-weight: bold;
+            font-style: italic;
+            margin: 8px 0 12px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #5a3714;
+        }
+
+        .buy-button,
+        .feedback-submit {
+            display: inline-block;
+            padding: 12px 22px;
+            margin-top: 10px;
+            background: #c77d16;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .buy-button:hover,
+        .feedback-submit:hover {
+            background: #a9650d;
+        }
+
+        .feedback-card {
+            max-width: 650px;
+            margin: 25px auto;
+            padding: 28px;
+            background: white;
+            border: 1px solid #f0dfc5;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(90, 55, 20, 0.07);
+            text-align: left;
+        }
+
+        .feedback-form label {
+            display: block;
+            margin: 15px 0 7px;
+            font-weight: 600;
+            color: #543719;
+        }
+
+        .feedback-form input,
+        .feedback-form select,
+        .feedback-form textarea {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #dcc8ad;
+            border-radius: 8px;
+            font: inherit;
+            background: #fffdf9;
+        }
+
+        .feedback-form textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .feedback-note {
+            color: #6d6256;
+            font-size: 14px;
+        }
+
+        .contact-card {
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 25px;
+            background: white;
+            border: 1px solid #f0dfc5;
+            border-radius: 12px;
+        }
+
+        .map-frame {
+            width: 100%;
+            height: 350px;
+            border: 0;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feedback-card {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+    <h1 class="logo-text">POTATO KANTO</h1>
+    <p>Crunch into happiness!</p>
+</header>
+
+<nav id="nav">
+    <a href="#" onclick="showPage('home'); return false;">Home</a>
+    <a href="#" onclick="showPage('about'); return false;">About</a>
+    <a href="#" onclick="showPage('products'); return false;">Products</a>
+    <a href="#" onclick="showPage('contact'); return false;">Contact</a>
+    <a href="#" onclick="showPage('feedback'); return false;">Feedback</a>
+</nav>
+
+<section id="home" class="page-content">
+    <div class="hero-image">
+        <img src="images/friesnapud.jpg" alt="Crispy fries">
+        <img src="images/potato-kanto-friesnapud.jpg" alt="Potato Kanto fries">
+    </div>
+
+    <p class="eyebrow">WELCOME TO POTATO KANTO</p>
+    <h1>Your Potato Cravings, Satisfied!</h1>
+
+    <p class="intro">
+        Welcome to Potato Kanto, your go-to spot for delicious,
+        crispy, and flavorful potato snacks!
+    </p>
+
+    <div class="home-highlight">
+        <div class="food-icon">🍟</div>
+        <h2>Good Food. Great Mood.</h2>
+        <p>
+            From classic fries to cheesy and loaded fries,
+            we have tasty treats to satisfy your cravings.
+            Every bite is packed with flavor!
+        </p>
+    </div>
+
+    <div class="content-card">
+        <h2>Why You'll Love Our Fries</h2>
+        <p>Delicious potato snacks</p>
+        <p>Flavorful toppings and sauces</p>
+        <p>Perfect for sharing with friends</p>
+    </div>
+
+    <a href="#" onclick="showPage('products'); return false;"
+       class="cta-link">Explore Our Products</a>
+</section>
+
+<section id="about" class="page-content">
+    <p class="eyebrow">GET TO KNOW US</p>
+    <h1>About Potato Kanto</h1>
+
+    <p class="intro">
+        We're here to make every potato craving worth it!
+        Potato Kanto serves delicious, crispy, and flavorful
+        fries made for every kind of snack lover.
+    </p>
+
+    <div class="content-card">
+        <h2>Our Story</h2>
+        <p>
+Welcome to Potato Kanto, where every bite is filled with flavor and happiness! 🥔❤️ We serve delicious potato treats made to satisfy your cravings and bring a smile to your face. Our goal is to offer tasty, enjoyable, and affordable snacks that are perfect for sharing with friends, family, or simply treating yourself.
+At Potato Kanto, we believe that great food brings people together. Whether you're craving a quick snack or looking for something flavorful to enjoy, we're here to make every bite special. Thank you for being part of our journey!
+
+Potato Kanto — Your favorite potato treats, made with love! 🍟
+        </p>
+    </div>
+
+    <div class="content-card">
+        <h2>Our Mission</h2>
+        <p>
+            Our mission is to serve delicious fries with great
+            flavors, friendly service, and a satisfying experience
+            in every order.
+        </p>
+    </div>
+
+    <div class="content-card">
+        <h2>Our Vision</h2>
+        <p>
+            We aim to become a favorite go-to spot for potato
+            lovers by offering creative flavors, quality snacks,
+            and happy moments with every serving.
+        </p>
+    </div>
+</section>
+
+<section id="products" class="page-content">
+    <p class="eyebrow">FRESH, CRISPY, AND DELICIOUS</p>
+    <h1>Our Potato Menu</h1>
+
+    <p class="intro">
+        Find your favorite flavor! From classic fries to cheesy
+        and savory creations, there's something for everyone.
+    </p>
+
+    <div class="menu-grid">
+
+        <article class="product-card">
+            <img src="images/fries.jpg" alt="Overload Fries">
+            <h2>Overload Fries</h2>
+            <p class="product-tagline">The Loaded Meal</p>
+            <p>Crispy fries loaded with delicious toppings and savory sauces.</p>
+            <p class="price">₱25.00</p>
+            <a class="buy-button"
+               href="mailto:PotatoKanto@email.com?subject=Order%20Overload%20Fries&body=I%20would%20like%20to%20order%20Overload%20Fries%20for%20PHP%2025.00.">
+                Buy Now
+            </a>
+        </article>
+
+        <article class="product-card">
+            <img src="images/regular2.jpg" alt="Regular Flavor Fries">
+            <h2>Regular Flavor Fries</h2>
+            <p class="product-tagline">The Classic Favorite</p>
+            <p>Golden, crispy potato fries coated with flavorful seasoning.</p>
+            <p class="price">₱40.00</p>
+            <a class="buy-button"
+               href="mailto:PotatoKanto@email.com?subject=Order%20Regular%20Flavor%20Fries&body=I%20would%20like%20to%20order%20Regular%20Flavor%20Fries%20for%20PHP%2040.00.">
+                Buy Now
+            </a>
+        </article>
+
+        <article class="product-card">
+            <img src="images/chili.jpg" alt="Chili Cheese Fries">
+            <h2>Chili Cheese Fries</h2>
+            <p class="product-tagline">The Spicy Comfort</p>
+            <p>Crispy fries topped with cheesy goodness and a spicy kick.</p>
+            <p class="price">₱45.00</p>
+            <a class="buy-button"
+               href="mailto:PotatoKanto@email.com?subject=Order%20Chili%20Cheese%20Fries&body=I%20would%20like%20to%20order%20Chili%20Cheese%20Fries%20for%20PHP%2045.00.">
+                Buy Now
+            </a>
+        </article>
+
+        <article class="product-card">
+            <img src="images/thruffle.jpg" alt="Truffle Parmesan Fries">
+            <h2>Truffle Parmesan Fries</h2>
+            <p class="product-tagline">The Gourmet Choice</p>
+            <p>Savory fries with rich truffle flavor and Parmesan cheese.</p>
+            <p class="price">₱45.00</p>
+            <a class="buy-button"
+               href="mailto:PotatoKanto@email.com?subject=Order%20Truffle%20Parmesan%20Fries&body=I%20would%20like%20to%20order%20Truffle%20Parmesan%20Fries%20for%20PHP%2045.00.">
+                Buy Now
+            </a>
+        </article>
+
+        <article class="product-card">
+            <img src="images/garlic.jpg" alt="Garlic Butter Fries">
+            <h2>Garlic Butter Fries</h2>
+            <p class="product-tagline">The Savory Snack</p>
+            <p>Crispy fries tossed in buttery garlic flavor.</p>
+            <p class="price">₱40.00</p>
+            <a class="buy-button"
+               href="mailto:PotatoKanto@email.com?subject=Order%20Garlic%20Butter%20Fries&body=I%20would%20like%20to%20order%20Garlic%20Butter%20Fries%20for%20PHP%2040.00.">
+                Buy Now
+            </a>
+        </article>
+
+        <article class="product-card">
+            <img src="images/sweet.jpg" alt="Sweet Potato Fries">
+            <h2>Sweet Potato Fries</h2>
+            <p class="product-tagline">The Sweet Alternative</p>
+            <p>Sweet potato fries with a crispy outside and tender center.</p>
+            <p class="price">₱40.00</p>
+            <a class="buy-button"
+               href="mailto:PotatoKanto@email.com?subject=Order%20Sweet%20Potato%20Fries&body=I%20would%20like%20to%20order%20Sweet%20Potato%20Fries%20for%20PHP%2040.00.">
+                Buy Now
+            </a>
+        </article>
+
+    </div>
+</section>
+
+<section id="contact" class="page-content">
+    <p class="eyebrow">WE'D LOVE TO HEAR FROM YOU</p>
+    <h1>Contact Us</h1>
+
+<h2 class="profiles-heading">Meet Our Team</h2>
+
+<div class="profiles-container">
+
+    <div class="profile-card">
+        <img src="images/aki.jpg" alt="First team member">
+        <h3>Akira Gabrielle A. Balcos</h3>
+        <p>Owner / Team Member</p>
+    </div>
+
+    <div class="profile-card">
+        <img src="images/rheda.jpg" alt="Second team member">
+        <h3>Ahreda N. Sumohoy</h3>
+        <p>Owner / Team Member</p>
+    </div>
+
+</div>  
+
+    <p class="intro">
+        Have questions or want to know more about our fries?
+        Get in touch with Potato Kanto!
+    </p>
+
+    <div class="contact-card">
+        <div class="food-icon">📍</div>
+        <h2>Visit Potato Kanto</h2>
+        <p>Dicklum, Manolo Fortich, Bukidnon, Philippines</p>
+
+        <iframe
+            src="https://maps.google.com/maps?q=8.373365705457905,124.84699258506825&z=17&output=embed"
+            class="map-frame"
+            allowfullscreen
+            loading="lazy"
+            title="Potato Kanto Location Map">
+        </iframe>
+    </div>
+
+   <div class="contact-card contact-info-card">
+    <h2>Contact and Email Us Here!</h2>
+
+    <div class="contact-info-item">
+        <div class="food-icon"></div>
+        <div>
+            <h3>Call Us</h3>
+            <p>(+63) 975-741-1993</p>
+        </div>
+    </div>
+
+    <div class="contact-info-item">
+        <div class="food-icon"></div>
+        <div>
+            <h3>Email Us</h3>
+            <p>
+                <a href="mailto:PotatoKanto@email.com">
+                    PotatoKanto@email.com
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
+
+    <p class="menu-note">Thank you for supporting Potato Kanto! 🍟</p>
+</section>
+
+<section id="feedback" class="page-content">
+    <p class="eyebrow">YOUR OPINION MATTERS</p>
+    <h1>Customer Feedback</h1>
+
+    <p class="intro">
+        Enjoyed our fries? Tell us about your experience!
+    </p>
+
+    <div class="feedback-card">
+        <div class="food-icon" style="text-align:center;">🍟</div>
+        <h2 style="text-align:center;">How was your food?</h2>
+        <p style="text-align:center;">
+            Share your thoughts with the Potato Kanto team.
+            No star ratings needed!
+        </p>
+
+        <form class="feedback-form" onsubmit="sendFeedback(event)">
+            <label for="feedback-name">Your name</label>
+            <input
+                id="feedback-name"
+                name="name"
+                type="text"
+                placeholder="Enter your name"
+                required>
+
+            <label for="feedback-product">What did you order?</label>
+            <select id="feedback-product" name="product" required>
+                <option value="">Choose a product</option>
+                <option>Overload Fries</option>
+                <option>Regular Flavor Fries</option>
+                <option>Chili Cheese Fries</option>
+                <option>Truffle Parmesan Fries</option>
+                <option>Garlic Butter Fries</option>
+                <option>Sweet Potato Fries</option>
+                <option>Other</option>
+            </select>
+
+            <label for="feedback-message">Your feedback</label>
+            <textarea
+                id="feedback-message"
+                name="message"
+                placeholder="Tell us what you liked or what we can improve..."
+                required></textarea>
+
+            <button class="feedback-submit" type="submit">
+                Send Feedback
+            </button>
+
+            <p class="feedback-note">
+                Clicking Send Feedback opens your email app with your
+                message prepared so you can send it to us.
+            </p>
+        </form>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2026 Potato Kanto. All rights reserved.</p>
+</footer>
+
+<script>
+    function showPage(pageId) {
+        document.querySelectorAll('.page-content').forEach(function(page) {
+            page.classList.remove('active');
+        });
+
+        const selectedPage = document.getElementById(pageId);
+
+        if (selectedPage) {
+            selectedPage.classList.add('active');
+        }
+
+        window.scrollTo(0, 0);
+    }
+
+    function sendFeedback(event) {
+        event.preventDefault();
+
+        const form = event.target;
+        const name = form.elements.name.value.trim();
+        const product = form.elements.product.value;
+        const message = form.elements.message.value.trim();
+
+        if (!name || !product || !message) {
+            alert('Please complete all feedback fields.');
+            return;
+        }
+
+        const subject = encodeURIComponent('Potato Kanto Customer Feedback');
+        const body = encodeURIComponent(
+            'Customer name: ' + name + '\n' +
+            'Product ordered: ' + product + '\n\n' +
+            'Feedback:\n' + message
+        );
+
+        window.location.href =
+            'mailto:PotatoKanto@email.com?subject=' + subject +
+            '&body=' + body;
+    }
+
+    showPage('home');
+</script>
+
+</body>
+</html>

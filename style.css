@@ -1,0 +1,633 @@
+.header p {
+    font-size: 14px;
+    margin: 3px 0;
+    line-height: 1.2;
+}.header {
+    padding: 20px 0;
+    min-height: auto;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+.header p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    line-height: 1.2;
+}.header {
+    padding: 20px 0;
+    min-height: auto;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+.header p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    line-height: 1.2;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff8e7;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+}
+
+.header {
+    background-color: #fff8e7;
+    text-align: center;
+    padding: 45px 15px;
+}
+
+.logo-text {
+    font-size: clamp(35px, 7vw, 75px);
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header p {
+    color: #75421c;
+    font-size: 18px;
+    margin-top: 12px;
+}
+
+#nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 16px 24px;
+    transition: background-color 0.3s ease;
+}
+
+#nav a:hover,
+#nav a:focus {
+    background-color: #c77d16;
+}
+
+.page-content {
+    width: 100%;
+    padding: 50px 20px;
+    text-align: center;
+    scroll-margin-top: 65px;
+}
+
+.page-content:nth-of-type(even) {
+    background-color: #fff1d6;
+}
+
+.page-content h1 {
+    color: #8b4513;
+    font-size: clamp(28px, 4vw, 42px);
+    margin: 10px 0 15px;
+    line-height: 1.3;
+}
+
+.page-content h2 {
+    color: #a85d16;
+    margin-bottom: 12px;
+}
+
+.eyebrow {
+    color: #c77d16;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.intro {
+    max-width: 650px;
+    margin: 0 auto 28px;
+    line-height: 1.8;
+    color: #666;
+}
+
+.content-card,
+.home-highlight {
+    background-color: #fff;
+    border: 1px solid #f0dfc5;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 750px;
+    box-shadow: 0 4px 12px rgba(90, 55, 20, 0.07);
+}
+
+.content-card p,
+.home-highlight p {
+    line-height: 1.8;
+}
+
+.food-icon {
+    display: block;
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.cta-link {
+    display: inline-block;
+    background-color: #c77d16;
+    color: white;
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-link:hover,
+.cta-link:focus {
+    background-color: #8b4513;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid #f0dfc5;
+    border-radius: 12px;
+    padding: 25px 18px;
+    box-shadow: 0 4px 12px rgba(90, 55, 20, 0.07);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(90, 55, 20, 0.12);
+}
+
+.product-icon {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.product-card h2 {
+    font-size: 21px;
+}
+
+.product-card p {
+    line-height: 1.7;
+}
+
+.product-tagline {
+    color: #c77d16;
+    font-weight: bold;
+    font-style: italic;
+    margin: 8px 0 12px;
+}
+
+.price {
+    color: #c77d16;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.menu-note {
+    color: #777;
+    font-size: 14px;
+    margin-top: 25px;
+    line-height: 1.7;
+}
+
+.contact-card {
+    text-align: left;
+}
+
+.contact-card p {
+    margin: 18px 0;
+    overflow-wrap: anywhere;
+}
+
+.contact-card strong {
+    color: #8b4513;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    max-width: 1100px;
+    margin: 25px auto;
+}
+
+.contact-box {
+    background-color: #fff;
+    border: 1px solid #f0dfc5;
+    border-radius: 12px;
+    padding: 24px 15px;
+    box-shadow: 0 4px 12px rgba(90, 55, 20, 0.07);
+    overflow-wrap: anywhere;
+}
+
+.contact-icon {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.contact-box h2 {
+    color: #a85d16;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.contact-box p {
+    line-height: 1.7;
+}
+
+.contact-detail {
+    color: #c77d16;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.contact-form-card {
+    max-width: 700px;
+    text-align: left;
+}
+
+.contact-form-card > h2,
+.form-description {
+    text-align: center;
+}
+
+.profiles-heading {
+    margin-top: 40px;
+    color: #5a3714;
+}
+
+.profiles-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 25px;
+    max-width: 700px;
+    margin: 25px auto;
+}
+
+.profile-card {
+    width: 230px;
+    padding: 20px;
+    background: white;
+    border: 1px solid #f0dfc5;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(90, 55, 20, 0.07);
+    box-sizing: border-box;
+}
+
+.profile-card img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #f0dfc5;
+}
+
+.profile-card h3 {
+    margin: 15px 0 5px;
+    color: #5a3714;
+}
+
+.profile-card p {
+    margin: 5px 0;
+    color: #777;
+    font-size: 14px;
+}
+
+.contact-card a {
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 500px) {
+    .profiles-container {
+        gap: 15px;
+    }
+
+    .profile-card {
+        width: 100%;
+        max-width: 260px;
+    }
+}
+
+.form-description {
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #75421c;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddc7a8;
+    border-radius: 7px;
+    font: inherit;
+    background-color: #fffdf8;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: 2px solid #c77d16;
+    border-color: transparent;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.contact-form-card button {
+    border: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+#form-status {
+    margin-top: 15px;
+    color: #75421c;
+    line-height: 1.6;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    background-color: #c77d16;
+    color: white;
+    text-decoration: none;
+    padding: 11px 18px;
+    border-radius: 22px;
+    font-weight: bold;
+}
+
+.social-links a:hover,
+.social-links a:focus {
+    background-color: #8b4513;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: auto;
+}
+
+@media (max-width: 600px) {
+    .logo-text {
+        font-size: 35px;
+        letter-spacing: 1px;
+    }
+
+    .header {
+        padding: 35px 10px;
+    }
+
+    #nav a {
+        padding: 12px 14px;
+    }
+
+    .page-content {
+        padding: 35px 15px;
+    }
+
+    .content-card,
+    .home-highlight {
+        padding: 20px 15px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 950px;
+    height: 350px;
+    margin: 0 auto 30px;
+    overflow: hidden;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(90, 55, 20, 0.15);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .hero-image {
+        height: 220px;
+        border-radius: 12px;
+
+        .map-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.location-card {
+    max-width: 900px;
+    margin: 25px auto;
+}
+
+.price {
+    color: #c77d16;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 15px;
+    background-color: #fff1d6;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+}
+.header {
+    padding: 20px 0;
+    min-height: auto;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+.header p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.top-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    margin: 0;
+}
+
+.top-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.header {
+    padding: 15px 0;
+    min-height: auto;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header p {
+    display: none;
+}
+
+#contact .contact-card:nth-of-type(2),
+#contact .contact-card:nth-of-type(3) {
+    max-width: 350px;
+    padding: 12px 18px;
+    margin: 12px auto;
+}
+
+#contact .contact-card:nth-of-type(2) .food-icon,
+#contact .contact-card:nth-of-type(3) .food-icon {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+#contact .contact-card:nth-of-type(2) h2,
+#contact .contact-card:nth-of-type(3) h2 {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+#contact .contact-card:nth-of-type(2) p,
+#contact .contact-card:nth-of-type(3) p {
+    font-size: 13px;
+    margin: 5px 0;
+}
+
+#contact .contact-card:nth-of-type(3) a {
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+.contact-info-card {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 12px 0;
+}
+
+.contact-info-item .food-icon {
+    font-size: 28px;
+    margin: 0;
+}
+
+.contact-info-item h3 {
+    margin: 0 0 5px;
+}
+
+.contact-info-item p {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.contact-info-item a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.contact-info-item a:hover {
+    text-decoration: underline;
+}
+
+    }
+}
